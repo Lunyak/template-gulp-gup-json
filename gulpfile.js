@@ -12,22 +12,21 @@ const fs = require( 'fs' )
 const path = require('path') 
 const data = {} 
 
-gulp.task('json', async function() {
+gulp.task('json', (callback) => {
     try { 
         const modules = fs.readdirSync('src/data/') 
-
         modules.forEach(json => { 
-                const module = path.join('src/data', json)
-                const name = path.basename( json, path.extname( json ) ) 
-                const file = path.join( './src/data', json ) 
-                return data[name] = JSON.parse( fs.readFileSync( file ) ) 
-            }) 
-    } catch (e) { 
+            const name = path.basename(json, path.extname(json)) 
+            const file = path.join('./src/data', json) 
+            return data[name] = JSON.parse(fs.readFileSync(file)) 
+        }) 
+    } catch(e) {
         console.log(e)
     } 
+    callback()
 })
 
-gulp.task('pug', function() {
+gulp.task('pug', (callback) => {
 	return gulp.src('./src/pug/page/**/*.pug')
 		.pipe( plumber({
 			errorHandler: notify.onError(function(err){
@@ -46,6 +45,7 @@ gulp.task('pug', function() {
 		}))
 		.pipe( gulp.dest('./build/'))
         .pipe(browserSync.stream())
+        callback()
 });
 
 gulp.task('scss', function(callback){
@@ -88,19 +88,21 @@ gulp.task('watch', function() {
     watch('./build/img', gulp.parallel( browserSync.reload))
     watch('build/**/*.css', gulp.parallel( browserSync.reload ))
     watch(['./src/scss/**/*.scss'], gulp.parallel('scss'))
-    watch(['./src/pug/**/*.pug', './src/data/**/*.json'], gulp.parallel('pug'))
+    watch(['./src/pug/**/*.pug', './src/data/**/*.json'], gulp.parallel('json', 'pug'))
     watch('./src/data/**/*.json', gulp.parallel('pug'))
     watch('./src/img/**/*.*', gulp.parallel('copy:img'))
 })
 
-gulp.task('clean', function() {
+gulp.task('delet', function() {
     return del('./build')
 })
 
 gulp.task(
-    'default', 
+    'default',
     gulp.series(
-        gulp.parallel('clean'), 
-        gulp.parallel('json', 'scss', 'pug'), 
+        gulp.parallel('delet'),
+        gulp.parallel('scss', 'json', 'pug'),
         gulp.parallel('server', 'watch')
-));
+    )
+)
+
