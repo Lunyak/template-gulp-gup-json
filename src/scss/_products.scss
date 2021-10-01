@@ -1,0 +1,142 @@
+@import "_vars";
+
+.products {
+    font-family: "Open Sans";
+    font-weight: 400;
+
+    &__content {
+        max-width: 760px;
+        padding: 25px 0;
+
+        &:first-child{
+            padding-top: 50px;
+        }
+    }
+
+    &__catalog {
+        margin-top: 20px;
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__title {
+        font-family: "Open Sans";
+        font-weight: 400;
+        font-size: 24px;
+        color: rgb(99, 95, 87);
+        text-transform: uppercase;
+        line-height: 1.2;
+
+    }
+
+    &__list__item {
+        width: calc((100% / 3) - 28px);
+        height: 330px;
+        border: 8px solid #fff;
+        box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+        margin: 14px;
+        cursor: pointer;
+        position: relative;
+
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:nth-child(3n+4) {
+            margin-left: 0;
+        }
+
+        &:nth-child(3n+3) {
+            margin-right: 0;
+        }
+
+        &__img {
+
+            width: 100%;
+            height: 230px;
+            background-color: #eff1f0;
+            position: relative;
+
+            &-img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &__description {
+            font-size: 14px;
+            font-weight: 400;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &__text {
+                display: flex;
+                flex-direction: column;
+                padding-top: 15px;
+                padding-left: 3px;
+
+                &-title {
+                    font-size: 14px;
+
+
+                }
+
+                &-price {
+                    font-size: 18px;
+
+                    padding-top: 10px;
+                    color: $green;
+
+                    &-sale {
+                        font-size: 14px;
+                        color: #000;
+                        text-decoration: line-through;
+                    }
+                }
+            }
+
+            &-cart-btn {
+                padding-top: 15px;
+
+                &__icon {
+                    width: 45px;
+                    height: 45px;
+
+
+                    &-i {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.label-new {
+
+    &::after {
+        content: url(../img/new-label.png);
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        z-index: 2;
+    }
+}
+
+.label-sale {
+
+    &::after {
+        content: url(../img/sale-label.png);
+        position: absolute;
+        left: -10px;
+        top: -10px;
+        z-index: 2;
+    }
+}

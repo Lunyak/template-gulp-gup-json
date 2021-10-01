@@ -1,7 +1,5 @@
+@import './reset';
+@import './template';
 @import './header';
-
-body {
-    // background-color: aqua;
-    display: flex;
-    transition: all 0.5s ease;
-}
+@import './top';
+@import './products';

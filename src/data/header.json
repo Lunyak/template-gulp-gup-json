@@ -1,0 +1,24 @@
+{
+    "links": [
+        {
+            "href": "/home",
+            "text": "HOME"
+        },
+        {
+            "href": "/women",
+            "text": "WOMEN"
+        },
+        {
+            "href": "/man",
+            "text": "MEN"
+        },
+        {
+            "href": "/other",
+            "text": "OTHER"
+        },
+        {
+            "href": "/purchase",
+            "text": "PURCHASE"
+        }
+    ]
+}

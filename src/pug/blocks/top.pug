@@ -1,0 +1,21 @@
+
+include ../mixins/nav
+
+- var links = data.nav.links;
+
+.top
+	.container
+		button.burger
+			img(src='img/burger-close.svg', alt='burger')
+		.top__wrapper
+			.top__select-wrapper
+				span.top__select-label Language
+				select.top__select-language.select
+					option English
+					option Russian
+				span.top__select-label Currency
+				select.top__select-USD.select
+					option USD
+					option USR
+			if links
+				+nav(links, 'top')

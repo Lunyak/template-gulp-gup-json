@@ -1,0 +1,24 @@
+{
+    "links": [
+        {
+            "href": "/about",
+            "text": "Account"
+        },
+        {
+            "href": "/about",
+            "text": "Wishlist"
+        },
+        {
+            "href": "/about",
+            "text": "Checkout"
+        },
+        {
+            "href": "/about",
+            "text": "Log In"
+        },
+        {
+            "href": "/about",
+            "text": "Sign Up"
+        }
+    ]
+}

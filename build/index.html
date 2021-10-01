@@ -1,13 +1,107 @@
-<!DOCTYPE html>
+
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Test</title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <title>LEO SHOP + PUG</title>
   </head>
   <body>
-    <p>данные загружены из src/data/data.json</p>
+    <div class="top">
+      <div class="container">
+        <button class="burger"><img src="img/burger-close.svg" alt="burger"/></button>
+        <div class="top__wrapper">
+          <div class="top__select-wrapper"><span class="top__select-label">Language</span>
+            <select class="top__select-language select">
+              <option>English</option>
+              <option>Russian</option>
+            </select><span class="top__select-label">Currency</span>
+            <select class="top__select-USD select">
+              <option>USD</option>
+              <option>USR</option>
+            </select>
+          </div>
+              <nav class="top__nav">
+                <ul class="top__nav-list">
+                  <li class="top__nav-item"><a href="#">Account</a></li>
+                  <li class="top__nav-item"><a href="#">Wishlist</a></li>
+                  <li class="top__nav-item"><a href="#">Checkout</a></li>
+                  <li class="top__nav-item"><a href="#">Log In</a></li>
+                  <li class="top__nav-item"><a href="#">Sign Up</a></li>
+                </ul>
+              </nav>
+        </div>
+      </div>
+    </div>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__logo">
+            <p class="header__logo-text"><a class="header__logo-text__link" href="#">LEO SHOP</a></p>
+          </div>
+              <nav class="header__nav">
+                <ul class="header__nav-list">
+                  <li class="header__nav-item"><a href="#">HOME</a></li>
+                  <li class="header__nav-item"><a href="#">WOMEN</a></li>
+                  <li class="header__nav-item"><a href="#">MEN</a></li>
+                  <li class="header__nav-item"><a href="#">OTHER</a></li>
+                  <li class="header__nav-item"><a href="#">PURCHASE</a></li>
+                </ul>
+              </nav>
+          <div class="header__wrapper--right">
+            <div class="header__search">
+              <form class="header__search-form" action="">
+                <input class="header__search-form__input" type="search" placeholder="Search.."/><i class="header__search-form__input-search fas fa-search"></i>
+              </form>
+            </div>
+            <div class="header__buttons">
+              <div class="header__buttons--left header__buttons__icon icon"><i class="fas fa-tags header__buttons--left-img header__buttons__icon-i icon-i"></i></div>
+              <div class="header__buttons--right header__buttons__icon icon"><i class="fas fa-shopping-cart header__buttons--right-img header__buttons__icon-i icon-i"></i></div>
+            </div>
+            <div class="header__cart">
+              <p class="header__cart__text">CART (0)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="products">
+      <div class="container">
+        <div class="products__content"><span class="products__title">FEATURED PRODUCTS</span>
+          <div class="products__catalog">
+            <ul class="products__catalog__list">
+                  <li class="products__list__item card-sale">
+                    <div class="products__list__item__img"><img class="products__list__item__img-img" src="./img/card.png" alt="classes"/></div>
+                    <div class="products__list__item__description">
+                      <div class="products__list__item__description__text"><span class="products__list__item__description__text-title">Lorem Ipsum is simply.</span><span class="products__list__item__description__text-price">$388.00</span></div>
+                      <div class="products__list__item__description-cart-btn">
+                        <div class="products__list__item__description-cart-btn__icon icon"></div>
+                      </div><i class="fab fa-opencart products__list__item__description-cart-btn__icon-i icon-i"></i>
+                    </div>
+                  </li>
+                  <li class="products__list__item card-new">
+                    <div class="products__list__item__img"><img class="products__list__item__img-img" src="./img/card.png" alt="classes"/></div>
+                    <div class="products__list__item__description">
+                      <div class="products__list__item__description__text"><span class="products__list__item__description__text-title">Lorem Ipsum is simply.</span><span class="products__list__item__description__text-price">$388.00</span></div>
+                      <div class="products__list__item__description-cart-btn">
+                        <div class="products__list__item__description-cart-btn__icon icon"></div>
+                      </div><i class="fab fa-opencart products__list__item__description-cart-btn__icon-i icon-i"></i>
+                    </div>
+                  </li>
+                  <li class="products__list__item">
+                    <div class="products__list__item__img"><img class="products__list__item__img-img" src="./img/card.png" alt="classes"/></div>
+                    <div class="products__list__item__description">
+                      <div class="products__list__item__description__text"><span class="products__list__item__description__text-title">Lorem Ipsum is simply.</span><span class="products__list__item__description__text-price">$388.00</span></div>
+                      <div class="products__list__item__description-cart-btn">
+                        <div class="products__list__item__description-cart-btn__icon icon"></div>
+                      </div><i class="fab fa-opencart products__list__item__description-cart-btn__icon-i icon-i"></i>
+                    </div>
+                  </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

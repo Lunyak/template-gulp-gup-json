@@ -1,0 +1,13 @@
+include ../mixins/card.pug
+
+-var cards = data.products.cards
+
+section.products
+  .container
+    .products__content
+      span.products__title FEATURED PRODUCTS
+      .products__catalog
+        ul.products__catalog__list
+          if cards
+            each card in cards
+              +card(card)

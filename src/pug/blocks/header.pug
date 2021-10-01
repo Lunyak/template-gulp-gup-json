@@ -1,0 +1,26 @@
+include ../mixins/nav
+
+- var links = data.header.links
+
+header.header
+	.container
+		.header__wrapper
+			.header__logo
+				p.header__logo-text
+					a.header__logo-text__link(href='#') LEO SHOP
+			if links
+				+nav(links, 'header')
+
+			.header__wrapper--right
+				.header__search
+					form.header__search-form(action='')
+						input.header__search-form__input(type='search', placeholder='Search..')
+						i.header__search-form__input-search.fas.fa-search
+				.header__buttons
+					.header__buttons--left.header__buttons__icon.icon
+						i.fas.fa-tags.header__buttons--left-img.header__buttons__icon-i.icon-i
+					.header__buttons--right.header__buttons__icon.icon
+						i.fas.fa-shopping-cart.header__buttons--right-img.header__buttons__icon-i.icon-i
+				.header__cart
+					p.header__cart__text
+						| CART (0)

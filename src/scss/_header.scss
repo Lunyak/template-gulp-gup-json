@@ -1,4 +1,93 @@
-body {
-    font-size: 92px;
-    background-color: rgb(187, 138, 138);
+.header {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(101, 101, 101);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 0;
+
+        &--right {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__logo {
+        font-size: 36px;
+
+        &-text__link {
+            color: #656565;
+        }
+    }
+
+    &__nav{
+
+        &-list {
+            display: flex;
+        }
+
+        &-item {
+            margin-left: 23px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            a {
+                color: #656565;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+
+        &__icon {
+
+            width: 35px;
+            height: 35px;
+
+            &-i {
+                font-size: 18px;
+                color: #fff;
+            }
+        }
+
+
+        &--left {
+            margin-left: 15px;
+        }
+
+        &--right {
+            margin-left: 5px;
+            margin-right: 15px;
+        }
+
+    }
+
+    &__search {
+        position: relative;
+
+        &-form__input {
+            max-width: 175px;
+            height: 30px;
+            position: relative;
+            padding: 0 10px;
+
+            &-search {
+                font-size: 15px;
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
 }
