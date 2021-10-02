@@ -80,8 +80,13 @@ gulp.task('server', function() {
 });
 
 gulp.task('copy:img', function() {
-    return gulp.src('./src/img/**/*.*')
-        .pipe(gulp.dest('./build/img/'))
+    return gulp.src('./src/assets/img/**/*.*')
+        .pipe(gulp.dest('./build/assets/img/'))
+})
+
+gulp.task('copy:fonts', function() {
+    return gulp.src('./src/assets/fonts/**/*.*')
+        .pipe(gulp.dest('./build/assets/fonts/'))
 })
 
 gulp.task('watch', function() {
@@ -90,7 +95,8 @@ gulp.task('watch', function() {
     watch(['./src/scss/**/*.scss'], gulp.parallel('scss'))
     watch(['./src/pug/**/*.pug', './src/data/**/*.json'], gulp.parallel('json', 'pug'))
     watch('./src/data/**/*.json', gulp.parallel('pug'))
-    watch('./src/img/**/*.*', gulp.parallel('copy:img'))
+    watch('./src/assets/img/**/*.*', gulp.parallel('copy:img'))
+    watch('./src/assets/fonts/**/*.*', gulp.parallel('copy:fonts'))
 })
 
 gulp.task('delet', function() {
@@ -101,7 +107,7 @@ gulp.task(
     'default',
     gulp.series(
         gulp.parallel('delet'),
-        gulp.parallel('scss', 'json', 'pug'),
+        gulp.parallel('scss', 'json', 'copy:img', 'copy:fonts', 'pug'),
         gulp.parallel('server', 'watch')
     )
 )

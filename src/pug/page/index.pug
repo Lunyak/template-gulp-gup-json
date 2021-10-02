@@ -2,9 +2,12 @@
 extends ../layout/main.pug
 
 block variables
-	- var pageTitle = 'LEO SHOP + PUG'
+	- var pageTitle = 'LEO SHOP'
 
 block content
 	include ../blocks/top.pug
 	include ../blocks/header.pug
 	include ../blocks/products.pug
+
+block scripts
+	script(src="https://kit.fontawesome.com/5478256f40.js" crossorigin="anonymous")

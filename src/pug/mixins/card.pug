@@ -1,23 +1,21 @@
 mixin card(card)
 	if !card.mode
-		li.products__list__item
-			.products__list__item__img
-				img.products__list__item__img-img(src= card.image, alt= card.alt)
-			.products__list__item__description
-				.products__list__item__description__text
-					span.products__list__item__description__text-title= card.description
-					span.products__list__item__description__text-price $#{card.price}.00
-				.products__list__item__description-cart-btn
-					.products__list__item__description-cart-btn__icon.icon
-				i.fab.fa-opencart.products__list__item__description-cart-btn__icon-i.icon-i
+		.products__card
+			.products__card-img
+				img(src= card.image, alt= card.alt)
+			.products__card-description
+				.products__card-text
+					span.products__card-title= card.description
+					span.products__card-price $#{card.price}.00
+				button.products__card-btn-icon.icon
+					i.fab.fa-opencart.products__card-btn-icon-i.icon-i
 	else
-		li.products__list__item(class= card.mode == 'sale' ? 'card-sale' : 'card-new')
-			.products__list__item__img
-				img.products__list__item__img-img(src= card.image, alt= card.alt)
-			.products__list__item__description
-				.products__list__item__description__text
-					span.products__list__item__description__text-title= card.description
-					span.products__list__item__description__text-price $#{card.price}.00
-				.products__list__item__description-cart-btn
-					.products__list__item__description-cart-btn__icon.icon
-				i.fab.fa-opencart.products__list__item__description-cart-btn__icon-i.icon-i
+		.products__card(class= card.mode == 'sale' ? 'card-sale' : 'card-new')
+			.products__card-img
+				img(src= card.image, alt= card.alt)
+			.products__card-description
+				.products__card-text
+					span.products__card-title= card.description
+					span.products__card-price $#{card.price}.00
+				button.products__card-btn-icon.icon
+					i.fab.fa-opencart.products__card-btn-icon-i.icon-i

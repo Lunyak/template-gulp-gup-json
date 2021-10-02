@@ -1,21 +1,39 @@
 {
     "cards": [
         {
-            "image": "./img/card.png",
+            "image": "./assets/img/card.png",
             "alt": "classes",
             "description": "Lorem Ipsum is simply.",
             "price": "388",
             "mode": "sale"
         },
         {
-            "image": "./img/card.png",
+            "image": "./assets/img/card.png",
             "description": "Lorem Ipsum is simply.",
             "price": "388",
             "alt": "classes",
             "mode": "new"
         },
         {
-            "image": "./img/card.png",
+            "image": "./assets/img/card.png",
+            "description": "Lorem Ipsum is simply.",
+            "alt": "classes",
+            "price": "388"
+        },
+        {
+            "image": "./assets/img/card.png",
+            "description": "Lorem Ipsum is simply.",
+            "alt": "classes",
+            "price": "388"
+        },
+        {
+            "image": "./assets/img/card.png",
+            "description": "Lorem Ipsum is simply.",
+            "alt": "classes",
+            "price": "388"
+        },
+        {
+            "image": "./assets/img/card.png",
             "description": "Lorem Ipsum is simply.",
             "alt": "classes",
             "price": "388"

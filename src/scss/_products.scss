@@ -13,34 +13,29 @@
         }
     }
 
-    &__catalog {
-        margin-top: 20px;
-
-        &__list {
-            display: flex;
-            flex-wrap: wrap;
-        }
-    }
-
     &__title {
+        margin-bottom: 20px;
         font-family: "Open Sans";
         font-weight: 400;
         font-size: 24px;
         color: rgb(99, 95, 87);
         text-transform: uppercase;
         line-height: 1.2;
-
     }
 
-    &__list__item {
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+        padding: 8px;
         width: calc((100% / 3) - 28px);
         height: 330px;
-        border: 8px solid #fff;
         box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
         margin: 14px;
         cursor: pointer;
         position: relative;
-
 
         &:first-child {
             margin-left: 0;
@@ -54,14 +49,13 @@
             margin-right: 0;
         }
 
-        &__img {
-
+        &-img {
             width: 100%;
             height: 230px;
             background-color: #eff1f0;
             position: relative;
 
-            &-img {
+            img {
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -69,50 +63,46 @@
             }
         }
 
-        &__description {
+        &-description {
+            margin-top: 15px;
             font-size: 14px;
             font-weight: 400;
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
 
-            &__text {
-                display: flex;
-                flex-direction: column;
-                padding-top: 15px;
-                padding-left: 3px;
+        &-text {
+            display: flex;
+            flex-direction: column;
+            padding-left: 3px;
+        }
 
-                &-title {
-                    font-size: 14px;
+        &-title {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
 
+        &-price {
+            font-size: 18px;
+            color: $green;
 
-                }
-
-                &-price {
-                    font-size: 18px;
-
-                    padding-top: 10px;
-                    color: $green;
-
-                    &-sale {
-                        font-size: 14px;
-                        color: #000;
-                        text-decoration: line-through;
-                    }
-                }
+            &-sale {
+                font-size: 14px;
+                color: #000;
+                text-decoration: line-through;
             }
+        }
 
-            &-cart-btn {
-                padding-top: 15px;
+        &-btn {
+            padding-top: 15px;
 
-                &__icon {
-                    width: 45px;
-                    height: 45px;
+            &-icon {
+                width: 45px;
+                height: 45px;
 
-
-                    &-i {
-                        font-size: 20px;
-                    }
+                &-i {
+                    font-size: 20px;
                 }
             }
         }
