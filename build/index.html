@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/swiper-bundle.min.css"/>
     <title>LEO SHOP</title>
   </head>
   <body>
@@ -37,9 +38,7 @@
     <header class="header">
       <div class="container">
         <div class="header__wrapper">
-          <div class="header__logo">
-            <p class="header__logo-text"><a class="header__logo-text__link" href="#">LEO SHOP</a></p>
-          </div>
+          <div class="header__logo"><a class="header__logo-link" href="./"><img src="../assets/img/logo.png" alt="logo"/></a></div>
               <nav class="header__nav">
                 <ul class="header__nav-list">
                   <li class="header__nav-item"><a href="#">HOME</a></li>
@@ -49,76 +48,148 @@
                   <li class="header__nav-item"><a href="#">PURCHASE</a></li>
                 </ul>
               </nav>
-          <div class="header__wrapper--right">
+          <div class="header__info">
             <div class="header__search">
               <form class="header__search-form" action="">
-                <input class="header__search-form__input" type="search" placeholder="Search.."/><i class="header__search-form__input-search fas fa-search"></i>
+                <input class="header__search-input" type="search" placeholder="Search.."/><i class="header__search-input-icon fas fa-search"></i>
               </form>
             </div>
             <div class="header__buttons">
-              <div class="header__buttons--left header__buttons__icon icon"><i class="fas fa-tags header__buttons--left-img header__buttons__icon-i icon-i"></i></div>
-              <div class="header__buttons--right header__buttons__icon icon"><i class="fas fa-shopping-cart header__buttons--right-img header__buttons__icon-i icon-i"></i></div>
+                  <button class="btn header__btn btn--green"><i class="fas fa-tags"></i></button>
+                  <button class="btn header__btn btn--green"><i class="fas fa-shopping-cart"></i></button>
             </div>
             <div class="header__cart">
-              <p class="header__cart__text">CART (0)</p>
+              <p class="header__cart__text"> </p>CART (0)
             </div>
           </div>
         </div>
       </div>
     </header>
-    <section class="products">
-      <div class="container">
-        <div class="products__content">
-          <h2 class="products__title">FEATURED PRODUCTS</h2>
-          <div class="products__catalog">
-            <div class="products__cards">
-                  <div class="products__card card-sale">
-                    <div class="products__card-img"><img src="./assets/img/card.png" alt="classes"/></div>
-                    <div class="products__card-description">
-                      <div class="products__card-text"><span class="products__card-title">Lorem Ipsum is simply.</span><span class="products__card-price">$388.00</span></div>
-                      <button class="products__card-btn-icon icon"><i class="fab fa-opencart products__card-btn-icon-i icon-i"></i></button>
-                    </div>
-                  </div>
-                  <div class="products__card card-new">
-                    <div class="products__card-img"><img src="./assets/img/card.png" alt="classes"/></div>
-                    <div class="products__card-description">
-                      <div class="products__card-text"><span class="products__card-title">Lorem Ipsum is simply.</span><span class="products__card-price">$388.00</span></div>
-                      <button class="products__card-btn-icon icon"><i class="fab fa-opencart products__card-btn-icon-i icon-i"></i></button>
-                    </div>
-                  </div>
-                  <div class="products__card">
-                    <div class="products__card-img"><img src="./assets/img/card.png" alt="classes"/></div>
-                    <div class="products__card-description">
-                      <div class="products__card-text"><span class="products__card-title">Lorem Ipsum is simply.</span><span class="products__card-price">$388.00</span></div>
-                      <button class="products__card-btn-icon icon"><i class="fab fa-opencart products__card-btn-icon-i icon-i"></i></button>
-                    </div>
-                  </div>
-                  <div class="products__card">
-                    <div class="products__card-img"><img src="./assets/img/card.png" alt="classes"/></div>
-                    <div class="products__card-description">
-                      <div class="products__card-text"><span class="products__card-title">Lorem Ipsum is simply.</span><span class="products__card-price">$388.00</span></div>
-                      <button class="products__card-btn-icon icon"><i class="fab fa-opencart products__card-btn-icon-i icon-i"></i></button>
-                    </div>
-                  </div>
-                  <div class="products__card">
-                    <div class="products__card-img"><img src="./assets/img/card.png" alt="classes"/></div>
-                    <div class="products__card-description">
-                      <div class="products__card-text"><span class="products__card-title">Lorem Ipsum is simply.</span><span class="products__card-price">$388.00</span></div>
-                      <button class="products__card-btn-icon icon"><i class="fab fa-opencart products__card-btn-icon-i icon-i"></i></button>
-                    </div>
-                  </div>
-                  <div class="products__card">
-                    <div class="products__card-img"><img src="./assets/img/card.png" alt="classes"/></div>
-                    <div class="products__card-description">
-                      <div class="products__card-text"><span class="products__card-title">Lorem Ipsum is simply.</span><span class="products__card-price">$388.00</span></div>
-                      <button class="products__card-btn-icon icon"><i class="fab fa-opencart products__card-btn-icon-i icon-i"></i></button>
-                    </div>
-                  </div>
+    <main class="main">
+      <section class="slider">
+        <div class="swiper-wrapper">
+          <div class="slider__slide swiper-slide"><img src="../assets/img/bg-slider-01.jpg" alt="classes"/>
+            <div class="slider__text">
+              <h2 class="slider__title">ALUMINUM CLUB 01</h2>
+              <p class="slider__subtitle">EXPERIENCE RAY-BAN</p>
+            </div>
+            <div class="swiper-button-next">
+              <svg class="svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 320 512">
+                <path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path>
+              </svg>
+            </div>
+            <div class="swiper-button-prev">
+              <svg class="svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 320 512">
+                <path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="slider__slide swiper-slide"><img src="../assets/img/bg-slider-02.jpg" alt="classes"/>
+            <div class="slider__text">
+              <h2 class="slider__title">ANOTHER TEXT 02</h2>
+              <p class="slider__subtitle">ABSOLUT ANOTE TEXT</p>
+            </div>
+            <div class="swiper-button-next">
+              <svg class="svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 320 512">
+                <path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path>
+              </svg>
+            </div>
+            <div class="swiper-button-prev">
+              <svg class="svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 320 512">
+                <path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="slider__slide swiper-slide"><img src="../assets/img/bg-slider-01.jpg" alt="classes"/>
+            <div class="slider__text">
+              <h2 class="slider__title">ALUMINUM CLUB 03</h2>
+              <p class="slider__subtitle">EXPERIENCE RAY-BAN</p>
+            </div>
+            <div class="swiper-button-next">
+              <svg class="svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 320 512">
+                <path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path>
+              </svg>
+            </div>
+            <div class="swiper-button-prev">
+              <svg class="svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 320 512">
+                <path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="slider__slide swiper-slide"><img src="../assets/img/bg-slider-02.jpg" alt="classes"/>
+            <div class="slider__text">
+              <h2 class="slider__title">ANOTHER TEXT 04</h2>
+              <p class="slider__subtitle">ABSOLUT ANOTE TEXT</p>
+            </div>
+            <div class="swiper-button-next">
+              <svg class="svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 320 512">
+                <path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path>
+              </svg>
+            </div>
+            <div class="swiper-button-prev">
+              <svg class="svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 320 512">
+                <path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path>
+              </svg>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section class="products">
+        <div class="container">
+          <div class="products__content">
+            <h2 class="products__title">FEATURED PRODUCTS</h2>
+            <div class="products__catalog">
+              <div class="products__cards">
+                      <div class="products__card card-sale">
+                        <div class="products__card-img"><img src="./assets/img/card.png" alt="classes"/></div>
+                        <div class="products__card-description">
+                          <div class="products__card-text"><span class="products__card-title">Lorem Ipsum is simply.</span><span class="products__card-price">$388.00</span></div>
+                                <button class="btn green btn--undefined"><i class="fab fa-undefined"></i></button>
+                        </div>
+                      </div>
+                      <div class="products__card card-new">
+                        <div class="products__card-img"><img src="./assets/img/card.png" alt="classes"/></div>
+                        <div class="products__card-description">
+                          <div class="products__card-text"><span class="products__card-title">Lorem Ipsum is simply.</span><span class="products__card-price">$388.00</span></div>
+                                <button class="btn green btn--undefined"><i class="fab fa-undefined"></i></button>
+                        </div>
+                      </div>
+                      <div class="products__card">
+                        <div class="products__card-img"><img src="./assets/img/card.png" alt="classes"/></div>
+                        <div class="products__card-description">
+                          <div class="products__card-text"><span class="products__card-title">Lorem Ipsum is simply.</span><span class="products__card-price">$388.00</span></div>
+                                <button class="btn green btn--undefined"><i class="fab fa-undefined"></i></button>
+                        </div>
+                      </div>
+                      <div class="products__card">
+                        <div class="products__card-img"><img src="./assets/img/card.png" alt="classes"/></div>
+                        <div class="products__card-description">
+                          <div class="products__card-text"><span class="products__card-title">Lorem Ipsum is simply.</span><span class="products__card-price">$388.00</span></div>
+                                <button class="btn green btn--undefined"><i class="fab fa-undefined"></i></button>
+                        </div>
+                      </div>
+                      <div class="products__card">
+                        <div class="products__card-img"><img src="./assets/img/card.png" alt="classes"/></div>
+                        <div class="products__card-description">
+                          <div class="products__card-text"><span class="products__card-title">Lorem Ipsum is simply.</span><span class="products__card-price">$388.00</span></div>
+                                <button class="btn green btn--undefined"><i class="fab fa-undefined"></i></button>
+                        </div>
+                      </div>
+                      <div class="products__card">
+                        <div class="products__card-img"><img src="./assets/img/card.png" alt="classes"/></div>
+                        <div class="products__card-description">
+                          <div class="products__card-text"><span class="products__card-title">Lorem Ipsum is simply.</span><span class="products__card-price">$388.00</span></div>
+                                <button class="btn green btn--undefined"><i class="fab fa-undefined"></i></button>
+                        </div>
+                      </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
   <script src="https://kit.fontawesome.com/5478256f40.js" crossorigin="anonymous"></script>
+  <script src="../js/swiper-bundle.min.js"></script>
+  <script src="../js/slider.js"></script>
 </html>

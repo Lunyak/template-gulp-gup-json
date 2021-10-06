@@ -1,0 +1,3 @@
+mixin btn(data, classes)
+    button.btn(class= classes + ' ' + 'btn--' + data.modify)
+        i(class= data.curentClass ? 'fas' + ' ' + 'fa-' + data.icon : 'fab' + ' ' + 'fa-' + data.icon)

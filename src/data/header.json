@@ -20,5 +20,22 @@
             "href": "/purchase",
             "text": "PURCHASE"
         }
+    ],
+    "logo": {
+        "src": "../assets/img/logo.png",
+        "alt": "logo"
+    },
+    "btn": [
+        {
+            "icon": "tags",
+            "modify": "green",
+            "curentClass": true
+        },
+        {
+            "icon": "shopping-cart",
+            "modify": "green",
+            "curentClass": true
+        }
     ]
+
 }

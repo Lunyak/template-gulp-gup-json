@@ -1,0 +1,29 @@
+{
+    
+    "slids": [
+        {
+            "title": "ALUMINUM CLUB 01",
+            "subtitle": "EXPERIENCE RAY-BAN",
+            "img": "../assets/img/bg-slider-01.jpg",
+            "alt": "classes"
+        },
+        {
+            "title": "ANOTHER TEXT 02",
+            "subtitle": "ABSOLUT ANOTE TEXT",
+            "img": "../assets/img/bg-slider-02.jpg",
+            "alt": "classes"
+        },
+        {
+            "title": "ALUMINUM CLUB 03",
+            "subtitle": "EXPERIENCE RAY-BAN",
+            "img": "../assets/img/bg-slider-01.jpg",
+            "alt": "classes"
+        },
+        {
+            "title": "ANOTHER TEXT 04",
+            "subtitle": "ABSOLUT ANOTE TEXT",
+            "img": "../assets/img/bg-slider-02.jpg",
+            "alt": "classes"
+        }
+    ]
+}

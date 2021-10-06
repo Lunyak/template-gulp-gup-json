@@ -7,7 +7,12 @@ block variables
 block content
 	include ../blocks/top.pug
 	include ../blocks/header.pug
-	include ../blocks/products.pug
+
+	main.main
+		include ../blocks/slider.pug
+		include ../blocks/products.pug
 
 block scripts
 	script(src="https://kit.fontawesome.com/5478256f40.js" crossorigin="anonymous")
+	script(src='../js/swiper-bundle.min.js')
+	script(src="../js/slider.js")

@@ -1,0 +1,20 @@
+@import './../_vars';
+
+.btn {
+	background-color: none;
+    border: none;
+    cursor: pointer;
+	position: relative;
+    outline: none;
+
+    &--green {
+        border-radius: 50%;
+        background-color: $green;
+        width: 35px;
+        height: 35px;
+
+        i {
+            color: #fff;
+        }
+    }
+}

@@ -1,3 +1,5 @@
+include ./btn
+
 mixin card(card)
 	if !card.mode
 		.products__card
@@ -7,8 +9,7 @@ mixin card(card)
 				.products__card-text
 					span.products__card-title= card.description
 					span.products__card-price $#{card.price}.00
-				button.products__card-btn-icon.icon
-					i.fab.fa-opencart.products__card-btn-icon-i.icon-i
+				+btn('opencart', 'green')
 	else
 		.products__card(class= card.mode == 'sale' ? 'card-sale' : 'card-new')
 			.products__card-img
@@ -17,5 +18,4 @@ mixin card(card)
 				.products__card-text
 					span.products__card-title= card.description
 					span.products__card-price $#{card.price}.00
-				button.products__card-btn-icon.icon
-					i.fab.fa-opencart.products__card-btn-icon-i.icon-i
+				+btn('opencart', 'green')

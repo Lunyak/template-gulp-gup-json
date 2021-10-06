@@ -8,7 +8,7 @@ const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
 const pug = require('gulp-pug');
 const del = require('del');
-const fs = require( 'fs' )
+const fs = require('fs')
 const path = require('path') 
 const data = {} 
 
@@ -89,6 +89,30 @@ gulp.task('copy:fonts', function() {
         .pipe(gulp.dest('./build/assets/fonts/'))
 })
 
+gulp.task('copy:js', function() {
+    return gulp.src('./src/js/**/*.*')
+        .pipe(gulp.dest('./build/js/'))
+})
+
+gulp.task('swiper:js', function() {
+    const modules = [
+        'node_modules/swiper/swiper-bundle.min.js',
+        'node_modules/swiper/swiper-bundle.min.js.map',
+        ];
+
+        return gulp.src(modules)
+        .pipe(gulp.dest('build/js'));
+})
+
+gulp.task('swiper:css', function() {
+    const modules = [
+        'node_modules/swiper/swiper-bundle.min.css',
+        ];
+
+        return gulp.src(modules)
+        .pipe(gulp.dest('build/css'));
+})
+
 gulp.task('watch', function() {
     watch('./build/img', gulp.parallel( browserSync.reload))
     watch('build/**/*.css', gulp.parallel( browserSync.reload ))
@@ -97,6 +121,7 @@ gulp.task('watch', function() {
     watch('./src/data/**/*.json', gulp.parallel('pug'))
     watch('./src/assets/img/**/*.*', gulp.parallel('copy:img'))
     watch('./src/assets/fonts/**/*.*', gulp.parallel('copy:fonts'))
+    watch('./src/js/**/*.*', gulp.parallel('copy:js'))
 })
 
 gulp.task('delet', function() {
@@ -107,7 +132,7 @@ gulp.task(
     'default',
     gulp.series(
         gulp.parallel('delet'),
-        gulp.parallel('scss', 'json', 'copy:img', 'copy:fonts', 'pug'),
+        gulp.parallel('scss', 'json', 'copy:img', 'copy:fonts', 'pug', 'copy:js', 'swiper:css', 'swiper:js'),
         gulp.parallel('server', 'watch')
     )
 )

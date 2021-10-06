@@ -1,6 +1,18 @@
+
+// blocks
 @import './reset';
 @import '_fonts';
 @import './template';
 @import './header';
+@import './slider';
 @import './top';
 @import './products';
+// mixins
+@import './mixins/btn';
+
+@import '../../node_modules/swiper/swiper-bundle.css';
+
+
+
+
+

@@ -1,26 +1,27 @@
 include ../mixins/nav
+include ../mixins/btn
 
 - var links = data.header.links
+- var logo = data.header.logo
+- var buttons = data.header.btn
 
 header.header
 	.container
 		.header__wrapper
 			.header__logo
-				p.header__logo-text
-					a.header__logo-text__link(href='#') LEO SHOP
+				a.header__logo-link(href='./')
+					img(src= logo.src, alt= logo.alt)
 			if links
 				+nav(links, 'header')
-
-			.header__wrapper--right
+			.header__info
 				.header__search
 					form.header__search-form(action='')
-						input.header__search-form__input(type='search', placeholder='Search..')
-						i.header__search-form__input-search.fas.fa-search
+						input.header__search-input(type='search', placeholder='Search..')
+						i.header__search-input-icon.fas.fa-search
 				.header__buttons
-					.header__buttons--left.header__buttons__icon.icon
-						i.fas.fa-tags.header__buttons--left-img.header__buttons__icon-i.icon-i
-					.header__buttons--right.header__buttons__icon.icon
-						i.fas.fa-shopping-cart.header__buttons--right-img.header__buttons__icon-i.icon-i
+					if buttons
+						each button in buttons
+							+btn(button, 'header__btn')
 				.header__cart
-					p.header__cart__text
-						| CART (0)
+					p.header__cart__text 
+					| CART (0)
